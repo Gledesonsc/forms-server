@@ -76,4 +76,3 @@ Este projeto está licenciado sob a licença [ADA](LICENSE).
 ---
 
 Desenvolvido com ❤️ por [Elias](https://github.com/Gledesonsc).
-```
