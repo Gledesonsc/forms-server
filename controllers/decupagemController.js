@@ -20,4 +20,17 @@ exports.getTodasDecupagens = async (req, res) => {
   }
 };
 
+// Obtém uma decupagem por ID
+exports.getDecupagemPorId = async (req, res) => {
+  try {
+    const decupagem = await Decupagem.findByPk(req.params.id);
+    if (!decupagem) {
+      return res.status(404).json({ message: 'Decupagem não encontrada' });
+    }
+    res.status(200).json(decupagem);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 // Implemente outros métodos do controlador (listar, atualizar, deletar)
