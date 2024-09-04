@@ -47,4 +47,18 @@ exports.atualizarDecupagem = async (req, res) => {
   }
 };
 
+// Exclui uma decupagem
+exports.excluirDecupagem = async (req, res) => {
+  try {
+    const decupagem = await Decupagem.findByPk(req.params.id);
+    if (!decupagem) {
+      return res.status(404).json({ message: 'Decupagem não encontrada' });
+    }
+    await decupagem.destroy();
+    res.status(204).end();
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 // Implemente outros métodos do controlador (listar, atualizar, deletar)
