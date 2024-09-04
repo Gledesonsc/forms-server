@@ -10,6 +10,14 @@ exports.criarDecupagem = async (req, res) => {
   }
 };
 
-
+// Obtém todas as decupagens
+exports.getTodasDecupagens = async (req, res) => {
+  try {
+    const decupagens = await Decupagem.findAll();
+    res.status(200).json(decupagens);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
 // Implemente outros métodos do controlador (listar, atualizar, deletar)
