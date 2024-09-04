@@ -1,4 +1,3 @@
-```markdown
 # 🚀 Projeto Server
 
 Bem-vindo ao **Projeto Server**! Este repositório contém um servidor Node.js configurado para rodar em ambiente de desenvolvimento com facilidade. Vamos explorar as funcionalidades e como você pode configurar e rodar o projeto no seu ambiente local.
